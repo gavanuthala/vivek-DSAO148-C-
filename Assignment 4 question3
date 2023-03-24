@@ -1,0 +1,35 @@
+Using namespace std;
+#include <iostream>
+
+class AddAmount {
+    private:
+        float amount;
+    
+    public:
+        // Constructor without parameter
+        AddAmount() {
+            amount = 50;
+        }
+        
+        // Constructor with parameter
+        AddAmount(float inputAmount) {
+            amount = 50 + inputAmount;
+        }
+
+        // Get final amount in the piggy bank
+        float getAmount() {
+            return amount;
+        }
+};
+
+int main() {
+    // Piggy bank without any additional amount
+    AddAmount piggyBank1;
+    cout << "Final amount in piggy bank without additional amount: $" << piggyBank1.getAmount() << endl;
+
+    // Piggy bank with additional amount of $100
+    AddAmount piggyBank2(100);
+    cout << "Final amount in piggy bank with additional amount of $100: $" << piggyBank2.getAmount() << endl;
+
+    return 0;
+}
